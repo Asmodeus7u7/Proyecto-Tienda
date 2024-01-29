@@ -119,6 +119,7 @@
     <a href="cinturones.html">Cinturones</a>
 
   </nav>
+  
 
   <style>
 
@@ -151,6 +152,74 @@
   </style>
 
 </head>
+<body>
+  
+    <div class="product-list">
+  
+      <!-- Aquí se mostrarán los productos -->
+  
+    </div>
+  
+  
+    <script>
+  
+      const products = [
+  
+        { id: 1, name: 'Producto 1', imageUrl: 'https://example.com/product1.jpg', price: 100 },
+  
+        { id: 2, name: 'Producto 2', imageUrl: 'https://example.com/product2.jpg', price: 200 },
 
+        { id: 3, name: 'Producto 3', imageUrl: 'https://example.com/product2.jpg', price: 300 },
 
+        { id: 4, name: 'Producto 4', imageUrl: 'https://example.com/product2.jpg', price: 400 },
+
+        { id: 5, name: 'Producto 5', imageUrl: 'https://example.com/product2.jpg', price: 500 },
+  
+        // ...
+  
+      ];
+  
+  
+      const productList = document.querySelector('.product-list');
+  
+  
+      products.forEach((product) => {
+  
+        const productCard = document.createElement('div');
+  
+        productCard.className = 'product-card';
+  
+  
+        const productImage = document.createElement('img');
+  
+        productImage.src = product.imageUrl;
+  
+        productImage.alt = product.name;
+  
+  
+        const productName = document.createElement('h2');
+  
+        productName.textContent = product.name;
+  
+  
+        const productPrice = document.createElement('p');
+  
+        productPrice.textContent = `Precio: $${product.price}`;
+  
+  
+        productCard.appendChild(productImage);
+  
+        productCard.appendChild(productName);
+  
+        productCard.appendChild(productPrice);
+  
+  
+        productList.appendChild(productCard);
+  
+      });
+  
+    </script>
+    
+  </body>
+  <button id="floating-button">carrito</button>
 </html>
