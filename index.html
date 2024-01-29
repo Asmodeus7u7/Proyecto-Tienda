@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tienda en línea</title>
+
+  <style>
+
+    .product-card {
+
+      display: inline-block;
+
+      width: 200px;
+
+      padding: 10px;
+
+      margin: 10px;
+
+      border: 1px solid #ccc;
+
+      border-radius: 5px;
+
+      text-align: center;
+
+    }
+
+    .product-card img {
+
+      width: 100%;
+
+      height: auto;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Tienda en línea</h1>
+
+  <div class="product-list">
+
+    <!-- Aquí se mostrarán los productos -->
+
+  </div>
+
+
+  <script>
+
+    const products = [
+
+      { id: 1, name: 'Producto 1', imageUrl: 'https://example.com/product1.jpg', price: 100 },
+
+      { id: 2, name: 'Producto 2', imageUrl: 'https://example.com/product2.jpg', price: 200 },
+
+      // ...
+
+    ];
+
+
+    const productList = document.querySelector('.product-list');
+
+
+    products.forEach((product) => {
+
+      const productCard = document.createElement('div');
+
+      productCard.className = 'product-card';
+
+
+      const productImage = document.createElement('img');
+
+      productImage.src = product.imageUrl;
+
+      productImage.alt = product.name;
+
+
+      const productName = document.createElement('h2');
+
+      productName.textContent = product.name;
+
+
+      const productPrice = document.createElement('p');
+
+      productPrice.textContent = `Precio: $${product.price}`;
+
+
+      productCard.appendChild(productImage);
+
+      productCard.appendChild(productName);
+
+      productCard.appendChild(productPrice);
+
+
+      productList.appendChild(productCard);
+
+    });
+
+  </script>
+
+</body>
+
+</html>
