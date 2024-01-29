@@ -38,74 +38,119 @@
 
     }
 
+    .product-list {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+    }
+
+    .header {
+
+      background-color: #3b3b3b;
+
+      color: rgb(0, 0, 0);
+
+      padding: 10px;
+
+      text-align: center;
+
+    }
+
+    .navbar {
+
+      display: flex;
+
+      justify-content: space-around;
+
+      align-items: center;
+
+      background-color: #eee;
+
+      padding: 10px;
+
+      border-radius: 5px;
+
+    }
+
+    .navbar a {
+
+      color: #333;
+
+      text-decoration: none;
+
+      padding: 5px;
+
+    }
+
+    .navbar a:hover {
+
+      background-color: #ccc;
+
+    }
+
   </style>
 
 </head>
 
 <body>
 
-  <h1>Tienda en línea</h1>
+  <header class="header">
 
-  <div class="product-list">
+    <h1>Tienda en línea</h1>
 
-    <!-- Aquí se mostrarán los productos -->
+  </header>
 
-  </div>
+  <nav class="navbar">
 
+    <a href="hombre.html">Hombre</a>
 
-  <script>
+    <a href="mujer.html">Mujer</a>
 
-    const products = [
+    <a href="guantes.html">Guantes</a>
 
-      { id: 1, name: 'Producto 1', imageUrl: 'https://example.com/product1.jpg', price: 100 },
+    <a href="botas.html">Botas</a>
 
-      { id: 2, name: 'Producto 2', imageUrl: 'https://example.com/product2.jpg', price: 200 },
+    <a href="chaparreras.html">Chaparreras</a>
 
-      // ...
+    <a href="chamarras.html">Chamarras</a>
 
-    ];
+    <a href="cinturones.html">Cinturones</a>
 
+  </nav>
 
-    const productList = document.querySelector('.product-list');
+  <style>
 
+    .product-card {
 
-    products.forEach((product) => {
+      display: inline-block;
 
-      const productCard = document.createElement('div');
+      width: 200px;
 
-      productCard.className = 'product-card';
+      padding: 10px;
 
+      margin: 10px;
 
-      const productImage = document.createElement('img');
+      border: 1px solid #ccc;
 
-      productImage.src = product.imageUrl;
+      border-radius: 5px;
 
-      productImage.alt = product.name;
+      text-align: center;
 
+    }
 
-      const productName = document.createElement('h2');
+    .product-card img {
 
-      productName.textContent = product.name;
+      width: 100%;
 
+      height: auto;
 
-      const productPrice = document.createElement('p');
+    }
 
-      productPrice.textContent = `Precio: $${product.price}`;
+  </style>
 
+</head>
 
-      productCard.appendChild(productImage);
-
-      productCard.appendChild(productName);
-
-      productCard.appendChild(productPrice);
-
-
-      productList.appendChild(productCard);
-
-    });
-
-  </script>
-
-</body>
 
 </html>
